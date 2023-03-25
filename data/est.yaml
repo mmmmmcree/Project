@@ -1,0 +1,7 @@
+path: D:/YOLOv5_7.0/train_data/face
+train: images/train
+val: images/train
+test: ''
+names:
+  0: '233'
+  1: '59984'
