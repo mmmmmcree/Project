@@ -1,6 +1,5 @@
 from torch.utils.data import Dataset, DataLoader
 import pandas as pd
-import numpy as np
 
 
 class My_Dataset(Dataset):
@@ -17,3 +16,11 @@ class My_Dataset(Dataset):
 
     def __len__(self):
         return self.len
+
+
+if __name__ == "__main__":
+    train_dataset = My_Dataset("final.csv")
+    train_dataloader = DataLoader(train_dataset, batch_size=5, shuffle=True, drop_last=True, num_workers=0)
+    for i in train_dataloader:
+        print("______________________")
+        print(i)

@@ -93,7 +93,7 @@ class Hand_Detect:
                 if multi_hand_landmarks:  # 如果检测到手, 则用draw对手做一些标记
                     img = self.draw(multi_hand_landmarks, img)
                     if label:
-                        dataframe = self.get_dataframe(multi_hand_landmarks, dataframe, label)
+                        self.dataframe = self.get_dataframe(multi_hand_landmarks, self.dataframe, label)
                     else:
                         try:
                             self.predict(multi_hand_landmarks)
@@ -111,5 +111,4 @@ class Hand_Detect:
 if __name__ == "__main__":
     hd = Hand_Detect()
     # hd.detect(label=2)
-    # dataframe_concat(2)
     hd.detect()

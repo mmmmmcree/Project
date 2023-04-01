@@ -5,9 +5,9 @@ import os
 def dataframe_concat(n):
     dataframe = None
     for i in range(1, n + 1):
-        filePath = f"Hand Landmarks data/label {i}.csv"
+        filePath = f"./label {i}.csv"
         dataframe = pd.concat([dataframe, pd.read_csv(filePath, index_col=0)], ignore_index=True)
-    dataframe.to_csv("Hand Landmarks data/final.csv")
+    dataframe.to_csv("./final.csv")
 
 
 if __name__ == "__main__":
