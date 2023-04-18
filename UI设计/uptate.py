@@ -60,7 +60,7 @@ class update:
         self.filePath = self.get_path("../runs/detect")
         self.trainFolder_Path = self.create_trainFolder(new)
         if new:
-            self.data = {"path": "D:/YOLOv5_7.0/train_data/face", "train": 'images/train', "val": "images/train",
+            self.data = {"path": f"{self.trainFolder_Path[1: ]}", "train": 'images/train', "val": "images/train",
                          'test': '',
                          "names": {}}
 
